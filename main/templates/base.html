@@ -1,15 +1,21 @@
 {% load cdnstaticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Bora Vrchat - {% block title %}{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% cdnstatic 'styles/tachyons.min.css' %}'">
+        <!--<link rel="stylesheet" href="{% cdnstatic 'styles/tachyons.min.css' %}'">-->
+        
+        <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'main/fa/css/all.min.css' %}">
         <link rel="stylesheet" href="{% cdnstatic 'styles/blog.css' %}'">
+
+        <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
     </head>
     <body>
         <section class="mw7 center">
-            <h1 class="athelas ph3 ph0-l"><a href="{% url 'blog-index' %}">Bora Vrchat</a></a></h1>
+            <h1 class="fa-solid" style="color:rgb(57, 238, 90)">Bora Vrchat</a></h1>
             {% block content %}{% endblock %}
         </section>
         <footer class="mw7 center">
